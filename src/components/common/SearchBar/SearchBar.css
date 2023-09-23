@@ -1,0 +1,15 @@
+
+.SearchBar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-radius: .9rem;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    width: 25rem;
+    height: 2rem;
+    margin: 1rem;
+    padding: .25rem;
+}

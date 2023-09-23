@@ -1,0 +1,16 @@
+
+
+.SearchBarButton{
+    all: unset;
+    background-color:white;
+    border: none;
+    border-radius: .75rem;
+    cursor: pointer;
+    height: 2rem;
+
+}
+
+.SearchIcon{
+    width: 30px;
+    height: 30px;
+}

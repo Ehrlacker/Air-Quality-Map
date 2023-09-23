@@ -1,0 +1,26 @@
+
+
+.Header{
+    all: unset;
+    width: 100vw;
+
+
+}
+
+.HeaderTitle{
+    margin-left: 1rem;
+    color: #026D00;
+    margin-bottom: -1rem;
+
+}
+
+.HeaderParagraph{
+    margin-left: 1rem;
+    font-weight: bold;
+}
+
+/* @media(min-width: 577px){
+   .Header{
+       display: none;
+   }
+} */
