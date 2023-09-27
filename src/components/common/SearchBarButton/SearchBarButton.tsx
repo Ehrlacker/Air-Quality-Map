@@ -1,11 +1,11 @@
 import Search from '../../../assets/icons/icons8-search-50.png'
 import './SearchBarButton.css'
 
-type button = {
+type SearchBarButtonProps = {
     onClick: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void
 }
 
-const SearchBarButton = ({ onClick }: button) => {
+const SearchBarButton = ({ onClick }: SearchBarButtonProps) => {
     return (
         <button className="SearchBarButton" onClick={onClick}>
             <img

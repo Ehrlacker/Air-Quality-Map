@@ -1,0 +1,15 @@
+
+.SearchBarInput{
+    outline: none;
+    border: none;
+    height: 2rem;
+    background-color: white;
+    border-radius: .75rem;
+    width: 8rem;
+
+}
+
+.SearchBarInput:focus{
+    border:none;
+    outline:none;
+}
