@@ -11,7 +11,7 @@ const SearchBarButton = ({ onClick }: SearchBarButtonProps) => {
             <img
                 className="SearchIcon"
                 src={Search}
-                alt="a logo"
+                alt="a magnifying glass"
             />
         </button>
     )

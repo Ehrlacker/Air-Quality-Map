@@ -1,0 +1,33 @@
+
+
+.AirQualityScale{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.AirQualityScaleValueContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.AirQualityScaleValue{
+display: flex;
+align-items: center;
+justify-content: center;
+
+}
+
+.AirQualitysquare{
+    height: 15px;
+    width: 15px;
+}
+
+.AirQualityScaleDescription{
+font-size:.75rem;
+margin-left: .5rem;
+}

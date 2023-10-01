@@ -5,7 +5,7 @@ const Header = () => {
     return (
         <div className="Header">
             <h1 className="HeaderTitle">Ozone</h1>
-            <p className="HeaderParagraph">Air Quality Map</p>
+            <p className="HeaderParagraph">Air Quality Search</p>
         </div>
     )
 }

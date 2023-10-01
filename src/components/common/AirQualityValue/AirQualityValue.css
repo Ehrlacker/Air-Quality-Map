@@ -1,0 +1,19 @@
+
+
+.AirQualityValue{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.AirQuality{
+    font-size:3rem;
+    font-weight: bold;
+    color: #026D00;
+}
+
+.City{
+    font-size:2rem;
+    font-weight: bold; 
+}

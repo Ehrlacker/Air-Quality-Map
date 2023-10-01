@@ -1,5 +1,13 @@
 
+
 .SearchBar{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.SearchBarForm{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -8,8 +16,12 @@
     cursor: pointer;
     border: none;
     outline: none;
-    width: 25rem;
+    width: 20rem;
     height: 2rem;
     margin: 1rem;
     padding: .25rem;
+}
+
+.SearchBarError{
+    color: red;
 }

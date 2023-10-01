@@ -1,53 +1,64 @@
 import { useState } from 'react'
-import HamburgerAndFormContainer from '../HamburgerAndFormContainer/HamburgerAndFormContainer'
-import { Cities } from '../../../types/types'
+import { Welcome } from '../../../types/types'
 import './MainSectionContainer.css'
+import AirQualityInfoContainer from '../AirQualityInfoContainer/AirQualityInfoContainer'
+import SearchBar from '../SearchBar/SearchBar'
 
 
 const MainSectionContainer = () => {
     const [searchInput, setSearchInput] = useState("")
     const [cityInput, setCityInput] = useState("")
-    const [returnedCities, setReturnedcities] = useState<Cities>();
+    const [airQuality, setAirQuality] = useState<Welcome>();
+    const [errorMessage, setErrorMessage] = useState("")
 
-    console.log("RENDEREDDDD")
-
-    const getStates = async () => {
-        if (!searchInput || !cityInput) return;
-        const url = `http://api.airvisual.com/v2/city?city=${cityInput}&state=${searchInput}&country=USA&key=${import.meta.env.VITE_REACT_App_airQualityApiKey}`
-        const response = await fetch(url)
-        const resJSON = await response.json()
-        setReturnedcities(resJSON)
-        console.log(returnedCities)
-    }
-
+    const getCityAirQuality = async () => {
+        try {
+            const url = `http://api.airvisual.com/v2/city?city=${cityInput}&state=${searchInput}&country=USA&key=${import.meta.env.VITE_REACT_App_airQualityApiKey}`
+            const response = await fetch(url)
+            if (!response.ok) {
+                setErrorMessage("Please type in a correct US city");
+                return
+            }
+            const resJSON = await response.json()
+            setAirQuality(resJSON)
+        } catch (error) {
+            console.log("error")
+        }}
 
     const HandleStateInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const newValue = e.target.value
         setSearchInput(newValue)
-        console.log(newValue)
     }
 
     const HandleCityInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        if(errorMessage !== ""){
+            setErrorMessage("");
+        }
         const newValue = e.target.value
         setCityInput(newValue)
-        console.log(newValue)
     }
 
     const HandleClcick = (e: React.MouseEvent<HTMLButtonElement>) => {
         e.preventDefault()
-        getStates()
+        if (cityInput === "") return;
+        else if(searchInput === "") return;
+        getCityAirQuality()
     }
 
 
     return (
         <section className="MainSectionContainer">
-            <HamburgerAndFormContainer
+            <SearchBar
                 changeCity={HandleCityInputChange}
                 onChange={HandleStateInputChange}
                 onClick={HandleClcick}
                 value={searchInput}
                 cityValue={cityInput}
-                Cities={returnedCities}
+                Cities={airQuality}
+                error={errorMessage}
+            />
+            <AirQualityInfoContainer
+                AirQuality={airQuality}
             />
         </section>
     )
