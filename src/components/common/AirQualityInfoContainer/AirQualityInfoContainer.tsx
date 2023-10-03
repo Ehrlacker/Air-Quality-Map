@@ -1,14 +1,11 @@
-
-
 import AirQualityScale from "../AirQualityScale/AirQualityScale"
 import AirQualityValue from "../AirQualityValue/AirQualityValue"
-import AirQualityDescription from "../AirQualityDescription/AirQualityDescription"
 import './AirQualityInfoContainer.css'
-import { Welcome } from '../../../types/types'
+import { AirApiReturnData } from '../../../types/types'
 
 
 type AirQualityInfoContainerProps = {
-    AirQuality?: Welcome;
+    AirQuality?: AirApiReturnData;
 }
 const AirQualityInfoContainer = ({AirQuality}:AirQualityInfoContainerProps) => {
     return (

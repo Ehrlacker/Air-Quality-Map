@@ -2,13 +2,13 @@ import { ChangeEventHandler } from "react"
 import SearchBarButton from "../SearchBarButton/SearchBarButton"
 import SearchBarInput from "../SearchStateInput/SearchStateInput"
 import SearchCity from "../SearchCity/SearchCity"
-import { Welcome } from '../../../types/types'
+import { AirApiReturnData } from '../../../types/types'
 import './SearchBar.css'
 
 type SearchBarProps = {
     value?: string;
     cityValue: string;
-    Cities?: Welcome
+    Cities?: AirApiReturnData
     error: string;
     onChange: ChangeEventHandler;
     changeCity: ChangeEventHandler;

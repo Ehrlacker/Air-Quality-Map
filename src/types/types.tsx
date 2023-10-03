@@ -27,10 +27,7 @@ export interface ScaleValueProps{
 }
 
 
-
-
-
-export interface Welcome {
+export interface AirApiReturnData {
     status: string;
     data:   Data;
 }

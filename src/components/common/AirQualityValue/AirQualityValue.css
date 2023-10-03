@@ -10,10 +10,34 @@
 .AirQuality{
     font-size:3rem;
     font-weight: bold;
-    color: #026D00;
 }
 
 .City{
     font-size:2rem;
     font-weight: bold; 
+}
+
+
+.good {
+    color: #00982B;
+}
+
+.moderate {
+    color: #F8EE00;
+}
+
+.unhealthy-for-sensitive-groups {
+    color: #FF7A00;
+}
+
+.unhealthy {
+    color: #FF0000;
+}
+
+.very-unhealthy {
+    color: #FF00E5;
+}
+
+.hazardous {
+    color: #B02F2F;
 }
